@@ -1,29 +1,3 @@
-/* Reset básico y estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.container {
-    width: 90%; /* Esto limitará el ancho de tu contenido y lo centrará */
-    max-width: 1200px; /* Puedes ajustar este valor */
-    margin: auto; /* Esto centrará el contenedor */
-    padding: 20px; /* Esto añadirá espacio dentro del contenedor */
-}
-
-section {
-    margin: 40px 0; /* Esto añade un margen vertical a cada sección */
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
-    padding-bottom: 60px; /* Espacio para el footer */
-}
-
 /* Header y Navegación */
 header {
     background: #333;
