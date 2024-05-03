@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration production",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-app": "node dist/my-app/server/server.mjs"
+    "serve:ssr:my-app": "node dist/my-app/server/server.mjs",
+    "install:prod": "npm install --omit=dev"
   },
   "private": true,
   "dependencies": {
