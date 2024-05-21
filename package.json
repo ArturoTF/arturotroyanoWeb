@@ -2,7 +2,10 @@
   "name": "arturoTroyanoWEB",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "ng build --prod",
+    "build:server": "tsc server.ts --outDir dist",
+    "postinstall": "npm run build && npm run build:server"
   },
   "private": true,
   "dependencies": {
