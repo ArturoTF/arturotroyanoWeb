@@ -24,7 +24,9 @@ app.use(express.static(path.join(__dirname, "dist", "arturotroyanoWeb")));
 
 // Servir el index.html de Angular
 app.get("*", (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, "dist", "arturotroyanoWeb", "index.html"));
+  const indexPath = path.join(__dirname, "dist", "arturotroyanoWeb", "index.html");
+  console.log("Serving index.html from:", indexPath); // Mensaje de depuración
+  res.sendFile(indexPath);
 });
 
 app.listen(port, () => {
