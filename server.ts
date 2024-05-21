@@ -20,11 +20,11 @@ const allowCors = (req: Request, res: Response, next: NextFunction) => {
 app.use(allowCors);
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "dist", "arturotroyanoWeb")));
+app.use(express.static(path.join(__dirname, "dist", "arturotroyanoWeb", "browser")));
 
 // Servir el index.html de Angular
 app.get("*", (req: Request, res: Response) => {
-  const indexPath = path.join(__dirname, "dist", "arturotroyanoWeb", "index.html");
+  const indexPath = path.join(__dirname, "dist", "arturotroyanoWeb", "browser", "index.html");
   console.log("Serving index.html from:", indexPath); // Mensaje de depuración
   res.sendFile(indexPath);
 });
