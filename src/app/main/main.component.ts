@@ -1,6 +1,7 @@
 import { Component, HostListener, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
 import AOS from 'aos';
 import { StringsService } from '../services/strings.service';
+import { environment } from '../../environments/environment';
 
 interface LanguageTexts {
   [key: string]: {
@@ -26,6 +27,9 @@ interface LanguageTexts {
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements AfterViewInit {
+
+  inviteLink: string = environment.inviteNexusBot;
+
   constructor(
     private el: ElementRef, 
     private renderer: Renderer2,

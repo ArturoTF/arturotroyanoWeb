@@ -5,6 +5,7 @@
     "start": "node dist/server.js",
     "build": "ng build --configuration production",
     "build:server": "tsc -p tsconfig.server.json",
+    "build:railway": "node set-env.js && ng build --configuration=railway",
     "postinstall": "npm run build && npm run build:server"
   },
   "private": true,
