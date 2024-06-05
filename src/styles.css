@@ -1,11 +1,11 @@
-/* Reset básico y estilos generales */
+/* estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 section {
-    margin: 40px 0; /* Esto añade un margen vertical a cada sección */
+    margin: 40px 0;
 }
 
 body {
@@ -13,9 +13,10 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    padding-bottom: 60px; /* Espacio para el footer */
-    width: 90%; /* Esto limitará el ancho de tu contenido y lo centrará */
-    max-width: 1200px; /* Puedes ajustar este valor */
-    margin: auto; /* Esto centrará el contenedor */
-    padding: 20px; /* Esto añadirá espacio dentro del contenedor */
+    padding-bottom: 60px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
+

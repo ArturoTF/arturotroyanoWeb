@@ -2,24 +2,6 @@ import { Component, HostListener, ElementRef, Renderer2, AfterViewInit } from '@
 import AOS from 'aos';
 import { StringsService } from '../services/strings.service';
 
-interface LanguageTexts {
-  [key: string]: {
-    aboutTitle: string;
-    aboutContent: string;
-    projectsTitle: string;
-    skillsTitle: string;
-    educationTitle: string;
-    heroText: string;
-    heroSubtitle: string;
-    footerText: string;
-    verProyectos: string;
-    dam: string;
-    DDBBADMIN: string;
-    EUSAJAVA: string;
-    BACHILLER: string;
-  };
-}
-
 @Component({
   selector: 'app-main-component',
   templateUrl: './main.component.html',
@@ -29,7 +11,7 @@ export class MainComponent implements AfterViewInit {
   constructor(
     private el: ElementRef, 
     private renderer: Renderer2,
-    private stringsService: StringsService  // Inyecta el servicio aquí
+    private stringsService: StringsService
   ) {}
   /**
    * PARTE SCROLL VISUALIZACION
@@ -66,14 +48,13 @@ export class MainComponent implements AfterViewInit {
         }
       });
     });
-    this.texts = this.stringsService.getTexts('en');  // Asegúrate de llamar a este método correctamente
+    this.texts = this.stringsService.getTexts('en');
   }
 
   changeLanguage(lang: string): void {
-    // Actualizar 'texts' con el nuevo idioma
     this.texts = this.stringsService.getTexts(lang);
   
-    // Ahora actualizamos los textos en la página
+    // Actualizar textos/enlaces de la página
     const aboutMe = document.querySelector('.aboutMe') as HTMLElement;
     if (aboutMe) aboutMe.textContent = this.texts.aboutTitle;
   
@@ -113,12 +94,18 @@ export class MainComponent implements AfterViewInit {
     const skillsH2 = document.querySelector('#skills h2') as HTMLElement;
     if (skillsH2) skillsH2.textContent = this.texts.skillsTitle;
   
-    // Actualizar el texto de los enlaces de proyecto
-    document.querySelectorAll('.project-link').forEach((link: Element) => {
+    document.querySelectorAll('.project-link-git').forEach((link: Element) => {
       (link as HTMLAnchorElement).textContent = this.texts.verProyectos;
     });
+
+    document.querySelectorAll('.project-link-wiki').forEach((link: Element) => {
+      (link as HTMLAnchorElement).textContent = this.texts.wikiDelProyecto;
+    });
+
+    document.querySelectorAll('.project-link-invite').forEach((link: Element) => {
+      (link as HTMLAnchorElement).textContent = this.texts.invitarBot;
+    });
   
-    // Actualizar el texto del pie de página
     const footerP = document.querySelector('footer p') as HTMLParagraphElement;
     if (footerP) footerP.innerHTML = this.texts.footerText;
   }

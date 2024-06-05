@@ -10,11 +10,14 @@ interface LanguageTexts {
         heroText: string;
         heroSubtitle: string;
         footerText: string;
-        verProyectos: string;
         dam: string;
         DDBBADMIN: string;
         EUSAJAVA: string;
         BACHILLER: string;
+        verProyectos: string;
+        wikiDelProyecto: string;
+        invitarBot: string;
+
     };
 }
 
@@ -32,11 +35,13 @@ export class StringsService {
       heroText: "Hola, soy Arturo",
       heroSubtitle: "Desarrollador Full Stack",
       footerText: "2023 - Arturo. Todos los derechos reservados.",
-      verProyectos: "Ver Proyecto",
       dam: "Grado Superior Desarrollo de Aplicaciones Multiplataforma",
       DDBBADMIN: "Administrador de Bases de Datos Oracle",
       EUSAJAVA: "Curso de Desarrollo Web con Java",
-      BACHILLER: "Bachiller de Ciencias"
+      BACHILLER: "Bachiller de Ciencias",
+      verProyectos: "Ver Proyecto",
+      wikiDelProyecto: "Wiki del Proyecto",
+      invitarBot: "invitar Bot"
     },
     en: {
       aboutTitle: "About Me",
@@ -47,11 +52,13 @@ export class StringsService {
       heroText: "Hello, I'm Arturo",
       heroSubtitle: "Full Stack Developer",
       footerText: "2023 - Arturo. All rights reserved.",
-      verProyectos: "See Project",
       dam: "Cross-platform application development",
       DDBBADMIN: "Oracle Database Administrator",
       EUSAJAVA: "Web Development Course with Java",
-      BACHILLER: "Bachelor of Science"
+      BACHILLER: "Bachelor of Science",
+      verProyectos: "See Project",
+      wikiDelProyecto: "Project Wiki",
+      invitarBot: "invite Bot"
     }
   };
 

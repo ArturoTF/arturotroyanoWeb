@@ -1,29 +1,28 @@
-/* Header y Navegación */
 header {
     background: #333;
     color: #fff;
     padding: 0 20px;
     min-height: 70px;
     border-bottom: #0779e4 3px solid;
-    display: flex; /* Asegúrate de que el header sea un contenedor flex */
-    align-items: center; /* Centra los elementos verticalmente */
+    display: flex;
+    align-items: center;
 }
 
 nav {
-    flex-grow: 1; /* Permite que el elemento nav crezca para ocupar el espacio disponible */
+    flex-grow: 1;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Aplica flexbox a los elementos de la lista */
-    justify-content: center; /* Centra los elementos de la lista */
-    align-items: right; /* Alinea verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: right;
 }
 
 nav ul li {
-    padding: 20px 15px; /* Espacio alrededor de los elementos de la lista */
+    padding: 20px 15px;
 }
 
 nav ul li a {
@@ -40,16 +39,15 @@ nav ul li a {
 
 .lang-flag {
     cursor: pointer;
-    width: 25px; /* o el tamaño que prefieras */
+    width: 25px;
     height: auto;
-    margin-left: 10px; /* Ajusta el margen izquierdo si es necesario */
+    margin-left: 10px;
 }
 
 .lang-flag.active {
-    outline: 2px solid #fff; /* resalta la bandera activa */
+    outline: 2px solid #fff;
 }
 
-/* Estilos adicionales para el selector */
 #languageSelector {
     padding: 5px;
     border-radius: 5px;
@@ -64,7 +62,6 @@ nav ul li {
     margin: 0 5px;
 }
 
-/* Estilos para la sección Hero */
 #hero {
     text-align: center;
     background-color: #0779e4;
@@ -73,17 +70,16 @@ nav ul li {
     position: relative;
 }
 
-/* Estilo para la imagen de perfil */
 .profile-image {
-    width: 150px; /* O el tamaño que prefieras */
-    height: 150px; /* Mantén el mismo valor que el ancho para que sea un círculo */
-    border-radius: 50%; /* Esto hará que la imagen sea redonda */
-    border: 4px solid #fff; /* Borde blanco para que se destaque sobre el fondo azul */
-    margin-top: 20px; /* Espacio arriba de la imagen */
-    object-fit: cover; /* Esto asegurará que la imagen cubra todo el espacio asignado */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-top: 20px;
+    object-fit: cover;
 }
 
-/* Sobre mí */
+/* Apartado Sobre mí */
 #about {
     text-align: center;
     background: #fff;
@@ -92,7 +88,7 @@ nav ul li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Proyectos */
+/* Apartado Proyectos */
 #projects .project {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -111,7 +107,7 @@ nav ul li {
     margin: 10px;
 }
 
-/* Habilidades */
+/* Apartado Habilidades */
 #skills {
     background: #fff;
     padding: 20px;
@@ -126,57 +122,53 @@ nav ul li {
 }
 
 .skill {
-    width: 48%; /* Ajustar según el diseño */
+    width: 48%;
 }
 
 .skill label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 0.9em; /* Ajusta el tamaño del texto de la etiqueta */
+    font-size: 0.9em;
 }
 
 .progress-container {
     background-color: #eee;
     border-radius: 20px;
     position: relative;
-    height: 20px; /* Altura de la barra de progreso */
+    height: 20px;
     overflow: hidden;
 }
 
 .progress-bar {
     background-color: #007bff;
     height: 100%;
-    width: 0; /* Inicialmente el ancho es 0 */
+    width: 0;
     border-radius: 20px;
-    transition: width 2s ease; /* Transición suave para la animación de la barra */
-    position: relative; /* Para posicionar la etiqueta absolutamente dentro de esta */
+    transition: width 2s ease;
+    position: relative;
 }
 
 .progress-label {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%); /* Centra el texto */
-    line-height: 20px; /* Debe coincidir con la altura de .progress-bar */
-    font-size: 0.75em; /* Tamaño de la fuente del texto sobre la barra de progreso */
+    transform: translateX(-50%);
+    line-height: 20px;
+    font-size: 0.75em;
     color: #fff;
-    pointer-events: none; /* Asegura que el texto no interfiera con eventos del mouse */
+    pointer-events: none;
 }
 
-/* Animación de la barra de habilidades */
 @keyframes fillBar {
     from { width: 0; }
     to { width: 100%; }
 }
 
 .skill-fill {
-    background-color: #007bff; /* Color de la barra de habilidades */
-    height: 100%; /* Asegúrate de que la altura sea la misma que la del contenedor de la barra */
-    /* La animación se manejará con JavaScript cuando el elemento esté en el viewport */
+    background-color: #007bff;
+    height: 100%;
 }
-
-
 
 #education {
     background: #fff;
@@ -189,17 +181,17 @@ nav ul li {
 .education-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Esto añade un espacio entre los elementos */
-    justify-content: space-around; /* Esto distribuye el espacio alrededor de los elementos */
+    gap: 20px;
+    justify-content: space-around;
 
 }
 
 .education-item {
-    flex-basis: calc(50% - 20px); /* Esto establece el ancho de cada elemento teniendo en cuenta el espacio de separación (gap) */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: Añade una sombra para cada elemento */
-    margin-bottom: 20px; /* Esto añade un margen en la parte inferior */
-    background: #fff; /* Esto establece el fondo blanco para los elementos */
-    padding: 15px; /* Esto añade espacio dentro de los elementos */
+    flex-basis: calc(50% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
 }
 
 .education-item h3 {
@@ -216,51 +208,45 @@ nav ul li {
     color: #757575!important
 }
 
-
 footer {
-
-    color: #333; /* Esto es para el texto blanco */
-    text-align: center; /* Esto centra el texto y los iconos de redes sociales */
-    padding: 10px 0; /* Espacio arriba y abajo dentro del footer */
-    font-family: Arial, sans-serif; /* O la fuente que prefieras */
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
     font-weight: bold;
 }
 
 .footer-name {
-    margin-bottom: 10px; /* Espacio entre el nombre y los iconos de redes sociales */
+    margin-bottom: 10px;
 }
 
 .footer-content {
     width: 100%;
-    max-width: 1200px; /* Ancho máximo para el contenido del footer */
-    margin: auto; /* Centrar el contenido del footer */
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .social-links a {
-    color: #333; /* Color de los iconos */
-    margin: 0 5px; /* Espacio horizontal entre los iconos */
-    font-size: 24px; /* Tamaño de los iconos */
-    transition: color 0.3s; /* Transición suave para el hover */
+    color: #333;
+    margin: 0 5px;
+    font-size: 24px;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #e7e7e7; /* Cambia el color al pasar el mouse */
+    color: #e7e7e7;
 }
 
-/* Asegúrate de incluir el font awesome CDN o la librería correspondiente para los íconos */
-
-
-/* Responsive Design */
 @media (max-width: 768px) {
     header nav ul, nav ul li {
         text-align: center;
         width: 100%;
     }
     .education-item {
-        flex-basis: 100%; /* Cada elemento toma el ancho completo en pantallas pequeñas */
+        flex-basis: 100%;
     }
     .container {
         width: 95%;
